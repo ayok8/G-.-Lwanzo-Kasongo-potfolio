@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracia Lwanzo Kasongo | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            500: '#D4AF37',
+                            600: '#AA8C2C',
+                        },
+                        darkBg: '#0b0f19',
+                        cardDark: '#131c2e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-darkBg">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="font-serif text-xl tracking-wider font-bold text-slate-100 flex items-center gap-2">
+                <span class="text-gold-500">G</span>. Lwanzo Kasongo
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-gold-500 transition-colors">About</a>
+                <a href="#experience" class="hover:text-gold-500 transition-colors">Experience</a>
+                <a href="#publications" class="hover:text-gold-500 transition-colors">Publications</a>
+                <a href="#speaking" class="hover:text-gold-500 transition-colors">Speaking</a>
+                <a href="#awards" class="hover:text-gold-500 transition-colors">Awards</a>
+                <a href="#contact" class="px-5 py-2.5 rounded-full bg-gold-500 text-darkBg font-semibold hover:bg-gold-600 transition-all shadow-lg shadow-gold-500/10">Get in Touch</a>
+            </nav>
+
+            <button id="menu-btn" class="md:hidden text-slate-200 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 pt-2 bg-darkBg border-b border-slate-800 flex flex-col gap-4 text-slate-300">
+            <a href="#about" class="mobile-link hover:text-gold-500">About</a>
+            <a href="#experience" class="mobile-link hover:text-gold-500">Experience</a>
+            <a href="#publications" class="mobile-link hover:text-gold-500">Publications</a>
+            <a href="#speaking" class="mobile-link hover:text-gold-500">Speaking</a>
+            <a href="#awards" class="mobile-link hover:text-gold-500">Awards</a>
+            <a href="#contact" class="mobile-link text-gold-500 font-semibold">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen relative flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
+        <!-- Background Glow Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-gold-500 text-xs uppercase tracking-widest font-semibold">
+                    <i class="fa-solid fa-sparkles"></i> Young, Artistic & Corporate
+                </div>
+                <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                    Gracia Lwanzo <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-500 to-amber-200">Kasongo</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-light">
+                    PhD Researcher in Political Science & International Relations at UCLouvain. Bridging global governance, post-colonial human rights, cultural heritage restitution, and Afropean artistic aesthetics.
+                </p>
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#contact" class="px-8 py-3.5 rounded-full bg-gold-500 text-darkBg font-bold hover:bg-gold-600 transition-all shadow-xl shadow-gold-500/20 flex items-center gap-2">
+                        <span>Collaborate With Me</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#publications" class="px-8 py-3.5 rounded-full glass-card text-slate-200 font-semibold hover:border-gold-500/50 transition-all">
+                        Explore Research
+                    </a>
+                </div>
+                <!-- Quick Contact Meta -->
+                <div class="pt-6 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-400">
+                    <div><i class="fa-solid fa-location-dot text-gold-500 mr-2"></i> Louvain-la-Neuve, Belgium</div>
+                    <div><i class="fa-solid fa-envelope text-gold-500 mr-2"></i> gracia.lwanzo@uclouvain.be</div>
+                </div>
+            </div>
+
+            <!-- Right Image Card -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-72 sm:w-80 lg:w-96 aspect-[4/5] rounded-3xl p-3 glass-card shadow-2xl group">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent z-10 opacity-60 rounded-3xl"></div>
+                    <!-- Replace with photo link or local asset path -->
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Gracia Lwanzo Kasongo" class="w-full h-full object-cover rounded-2xl filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute bottom-6 left-6 right-6 z-20 text-center">
+                        <span class="text-xs uppercase tracking-widest text-gold-500 font-semibold">PhD Researcher & Legal Scholar</span>
+                        <div class="text-sm font-serif text-white mt-1">Catholic University of Louvain</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION & STUDIES -->
+    <section id="about" class="py-24 px-6 relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Academic Foundation</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">Education & Background</h3>
+                <p class="text-slate-400">From public international law foundations in DR Congo to cutting-edge doctoral research in Belgium[cite: 1].</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Education Item 1 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full">2020 - 2025</span>
+                        <h4 class="font-serif text-xl font-bold text-white mt-4 mb-2">PhD Researcher</h4>
+                        <p class="text-sm text-slate-300">Political Science and International Relations, Catholic University of Leuven (UCLouvain), Belgium[cite: 1].</p>
+                    </div>
+                </div>
+                <!-- Education Item 2 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full">2019 - 2020</span>
+                        <h4 class="font-serif text-xl font-bold text-white mt-4 mb-2">Master's Degree</h4>
+                        <p class="text-sm text-slate-300">International Humanitarian Action, Catholic University of Leuven (UCLouvain), Belgium[cite: 1].</p>
+                    </div>
+                </div>
+                <!-- Education Item 3 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full">2017 - 2018</span>
+                        <h4 class="font-serif text-xl font-bold text-white mt-4 mb-2">Bachelor's Degree (Bac +5)</h4>
+                        <p class="text-sm text-slate-300">Public International Law, UNIGOM, DR Congo[cite: 1].</p>
+                    </div>
+                </div>
+                <!-- Education Item 4 -->
+                <div class="glass-card p-8 rounded-2xl flex flex-col justify-between hover:border-gold-500/40 transition-all">
+                    <div>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full">2014 - 2015</span>
+                        <h4 class="font-serif text-xl font-bold text-white mt-4 mb-2">Graduation (Bac +3)</h4>
+                        <p class="text-sm text-slate-300">Public Law, UNIGOM, DR Congo[cite: 1].</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages Bar -->
+            <div class="mt-16 glass-card p-8 rounded-3xl">
+                <h4 class="text-lg font-serif font-bold text-white mb-6 text-center">Languages & Eloquence</h4>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+                    <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+                        <div class="font-bold text-white">French</div>
+                        <div class="text-gold-500 text-sm mt-1">C2 (Native)[cite: 1]</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+                        <div class="font-bold text-white">Swahili</div>
+                        <div class="text-gold-500 text-sm mt-1">C2 (Native)[cite: 1]</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+                        <div class="font-bold text-white">Lingala</div>
+                        <div class="text-gold-500 text-sm mt-1">C2 (Native)[cite: 1]</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800">
+                        <div class="font-bold text-white">English</div>
+                        <div class="text-gold-500 text-sm mt-1">C1 (Advanced)[cite: 1]</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 col-span-2 sm:col-span-2 lg:col-span-2">
+                        <div class="font-bold text-white">Dutch</div>
+                        <div class="text-gold-500 text-sm mt-1">B1 (Intermediate)[cite: 1]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience" class="py-24 px-6 relative border-t border-slate-800/60 bg-slate-950/40">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Career Path</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">Professional & Legal Experience</h3>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Exp 1 -->
+                <div class="glass-card p-8 rounded-2xl relative border-l-4 border-l-gold-500">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h4 class="font-serif text-xl font-bold text-white">PhD Student & Researcher</h4>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">2021 - 2026[cite: 1]</span>
+                    </div>
+                    <div class="text-sm text-slate-300 font-medium mb-4">Catholic University of Louvain (UCLouvain)[cite: 1]</div>
+                    <p class="text-slate-400 text-sm">Conducting rigorous academic research in political science, managing international scholarly output, and investigating post-colonial frameworks.</p>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="glass-card p-8 rounded-2xl relative border-l-4 border-l-slate-600">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h4 class="font-serif text-xl font-bold text-white">Legal Advisor</h4>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">Since 2016[cite: 1]</span>
+                    </div>
+                    <div class="text-sm text-slate-300 font-medium mb-4">Asbl "KIVU TERRA NOVA / RD Congo"[cite: 1]</div>
+                    <p class="text-slate-400 text-sm">Providing expert legal counsel, strategic planning, and governance support for community rights and territorial initiatives.</p>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="glass-card p-8 rounded-2xl relative border-l-4 border-l-slate-600">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h4 class="font-serif text-xl font-bold text-white">Employee & Associate</h4>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">2018 - 2021[cite: 1]</span>
+                    </div>
+                    <div class="text-sm text-slate-300 font-medium mb-4">Caritas International Belgium (Louvranges)[cite: 1]</div>
+                    <p class="text-slate-400 text-sm">Contributed to international humanitarian projects, coordination, and institutional operations.</p>
+                </div>
+
+                <!-- Exp 4 -->
+                <div class="glass-card p-8 rounded-2xl relative border-l-4 border-l-slate-600">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                        <h4 class="font-serif text-xl font-bold text-white">Legal Expert & Scholarship Participant</h4>
+                        <span class="text-xs font-mono text-gold-500 bg-gold-500/10 px-3 py-1 rounded-full w-fit mt-2 sm:mt-0">2016 - 2018[cite: 1]</span>
+                    </div>
+                    <div class="text-sm text-slate-300 font-medium mb-4">American Bar Association (ABA)[cite: 1]</div>
+                    <p class="text-slate-400 text-sm">Legal scholarship project & Judicial monitoring project in DRC / North Kivu, executing precise field documentation and legal evaluations[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESEARCH & PUBLICATIONS -->
+    <section id="publications" class="py-24 px-6 relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Scholarly Impact</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">Scientific Research Papers & Publications</h3>
+                <p class="text-slate-400">Selected peer-reviewed articles, book chapters, and reviews on art law, cultural heritage restitution, and colonial history.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pub 1 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gold-500 mb-3 font-mono">
+                            <span>Springer Book Series (In Press)</span>
+                            <span>2026</span>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">(In)visibility of black body in francophone media space: Afropean aesthetics in theater, dance and politics</h4>
+                        <p class="text-xs text-slate-400">Lwanzo Kasongo, G. & Dr. A. Stevellia Moussavou Nyama. Gender, Justice, and Legal Feminism[cite: 1].</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-gold-500"></i> Book Chapter
+                    </div>
+                </div>
+
+                <!-- Pub 2 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gold-500 mb-3 font-mono">
+                            <span>Springer, Cham</span>
+                            <span>2025</span>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">Building an Afropolitanism: Reimagining Congolese Cultural Heritage in Contemporary Architecture and Art</h4>
+                        <p class="text-xs text-slate-400">Kasongo, G.L., Joel, B.A. Urban Identity Explored: Architecture and Arts in Cities (CITAA 2023)[cite: 1].</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-gold-500"></i> Academic Publication
+                    </div>
+                </div>
+
+                <!-- Pub 3 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gold-500 mb-3 font-mono">
+                            <span>Art Law Review _ Lexology</span>
+                            <span>2025</span>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">A general introduction to Art Law in Democratic Republic of Congo</h4>
+                        <p class="text-xs text-slate-400">Lwanzo Kasongo, G[cite: 1].</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-scale-balanced text-gold-500"></i> Legal Review
+                    </div>
+                </div>
+
+                <!-- Pub 4 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gold-500 mb-3 font-mono">
+                            <span>OpinioJuris</span>
+                            <span>2024</span>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">Unraveling the Complexity of Human Remains Restitution in the Democratic Republic of Congo</h4>
+                        <p class="text-xs text-slate-400">Lwanzo Kasongo, G[cite: 1].</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-newspaper text-gold-500"></i> Scholarly Essay
+                    </div>
+                </div>
+
+                <!-- Pub 5 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gold-500 mb-3 font-mono">
+                            <span>Permanences Critiques</span>
+                            <span>2023</span>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">Le refus de s’excuser : Une nouvelle forme de violence coloniale Belgo-Congolaise ?</h4>
+                        <p class="text-xs text-slate-400">Lwanzo Kasongo, G. pp. 63-72[cite: 1].</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-book text-gold-500"></i> Journal Article
+                    </div>
+                </div>
+
+                <!-- Pub 6 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-gold-500 mb-3 font-mono">
+                            <span>Völkerrechtsblog</span>
+                            <span>2021</span>
+                        </div>
+                        <h4 class="font-serif text-lg font-bold text-white mb-2">Is Immaterial Restitution Enough? A Belgian Approach to the Human Right of Access to Cultural Heritage</h4>
+                        <p class="text-xs text-slate-400">Lwanzo Kasongo, G. DOI: 10.17176/20211103-110837-0[cite: 1].</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-gold-500"></i> International Blog Article
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERNATIONAL SPEAKING & CONFERENCES -->
+    <section id="speaking" class="py-24 px-6 relative border-t border-slate-800/60 bg-slate-950/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Global Engagements</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">International Conferences & Expert Lectures</h3>
+                <p class="text-slate-400">Invited speaker, panel convenor, and expert contributor across Europe, USA, and Africa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Europe -->
+                <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3 text-gold-500 font-serif text-xl font-bold border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-earth-europe"></i> Europe
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="border-b border-slate-900 pb-3">
+                            <strong class="text-white block">VAD Conference, Basel (2026)</strong>
+                            Co-convenor of panel on Restitution, Sovereignty and Geostrategic realignments[cite: 1].
+                        </li>
+                        <li class="border-b border-slate-900 pb-3">
+                            <strong class="text-white block">Belgian Senate (2025)</strong>
+                            Expert speaker: "Freeing minds, healing memories: restitution as an act of reparation"[cite: 1].
+                        </li>
+                        <li class="border-b border-slate-900 pb-3">
+                            <strong class="text-white block">University of Cambridge (2024)</strong>
+                            Panelist at Cambridge Heritage Research Centre (CHRC)[cite: 1].
+                        </li>
+                        <li>
+                            <strong class="text-white block">Leiden University & Cologne (2023-2024)</strong>
+                            Symposium presenter and panel chair on post-colonial museum struggles[cite: 1].
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- USA -->
+                <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3 text-gold-500 font-serif text-xl font-bold border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-earth-americas"></i> United States
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="border-b border-slate-900 pb-3">
+                            <strong class="text-white block">New York (2023)</strong>
+                            "From Stalemate to Progress: Navigating the Restitution Maze in Belgium and DRCongo" at International Conference on Museum Heritage Conservation[cite: 1].
+                        </li>
+                        <li>
+                            <strong class="text-white block">University of Pennsylvania (2022)</strong>
+                            Presented research on Belgo-Congolese Identity and Intersectionality in the Diaspora[cite: 1].
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Africa & Lectures -->
+                <div class="glass-card p-8 rounded-3xl space-y-6">
+                    <div class="flex items-center gap-3 text-gold-500 font-serif text-xl font-bold border-b border-slate-800 pb-4">
+                        <i class="fa-solid fa-earth-africa"></i> Africa & Expert Lecturing
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="border-b border-slate-900 pb-3">
+                            <strong class="text-white block">Morocco (CITAA 9th)</strong>
+                            Presented building an Afropolitanism: Reimagining Congolese Cultural Heritage in Architecture and Art[cite: 1].
+                        </li>
+                        <li class="border-b border-slate-900 pb-3">
+                            <strong class="text-white block">Lubumbashi, RD Congo</strong>
+                            Meaning and Resignification of Museums in Congo[cite: 1].
+                        </li>
+                        <li>
+                            <strong class="text-white block">KU Leuven & Ghent University</strong>
+                            Invited expert discussant on decolonizing public space and multicultural law[cite: 1].
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIZES AND AWARDS -->
+    <section id="awards" class="py-24 px-6 relative border-t border-slate-800/60">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Recognition</h2>
+                <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">Prizes, Grants & Honors</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Award 1 -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full pointer-events-none group-hover:bg-gold-500/20 transition-all"></div>
+                    <span class="text-xs font-mono text-gold-500">2026</span>
+                    <h4 class="font-serif text-xl font-bold text-white mt-2 mb-3">Francoise-Marie Peermans Fund Grant</h4>
+                    <p class="text-sm text-slate-300">Class of Arts and Moral and Political Sciences, Royal Academy of Letters and Fine Arts of Belgium[cite: 1].</p>
+                </div>
+
+                <!-- Award 2 -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full pointer-events-none group-hover:bg-gold-500/20 transition-all"></div>
+                    <span class="text-xs font-mono text-gold-500">2023 - 2025</span>
+                    <h4 class="font-serif text-xl font-bold text-white mt-2 mb-3">UCLouvain Doctoral Scholarship</h4>
+                    <p class="text-sm text-slate-300">Prestigious International Cooperation Doctoral Scholarship for academic excellence and global research[cite: 1].</p>
+                </div>
+
+                <!-- Award 3 -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full pointer-events-none group-hover:bg-gold-500/20 transition-all"></div>
+                    <span class="text-xs font-mono text-gold-500">2017</span>
+                    <h4 class="font-serif text-xl font-bold text-white mt-2 mb-3">Moot Court Winner</h4>
+                    <p class="text-sm text-slate-300">Winner, 5th Edition of Regional International Humanitarian Law Moot Court Competition, Great Lakes Region[cite: 1].</p>
+                </div>
+
+                <!-- Award 4 -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full pointer-events-none group-hover:bg-gold-500/20 transition-all"></div>
+                    <span class="text-xs font-mono text-gold-500">2015</span>
+                    <h4 class="font-serif text-xl font-bold text-white mt-2 mb-3">Gold Medal in Eloquence</h4>
+                    <p class="text-sm text-slate-300">Excellence in Eloquence Competition, Goma (DRC), and First Prize as Eloquent Woman of the City[cite: 1].</p>
+                </div>
+
+                <!-- Award 5 -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full pointer-events-none group-hover:bg-gold-500/20 transition-all"></div>
+                    <span class="text-xs font-mono text-gold-500">2014</span>
+                    <h4 class="font-serif text-xl font-bold text-white mt-2 mb-3">ABA Legal Scholarship</h4>
+                    <p class="text-sm text-slate-300">Selected for the highly competitive Legal Scholarship Program awarded by the American Bar Association[cite: 1].</p>
+                </div>
+
+                <!-- Award 6 -->
+                <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-bl-full pointer-events-none group-hover:bg-gold-500/20 transition-all"></div>
+                    <span class="text-xs font-mono text-gold-500">2017</span>
+                    <h4 class="font-serif text-xl font-bold text-white mt-2 mb-3">University Excellence</h4>
+                    <p class="text-sm text-slate-300">University of Goma Excellence Scholarship recognizing top-tier academic achievements[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6 relative border-t border-slate-800/60 bg-slate-950/60">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <h2 class="text-xs uppercase tracking-widest text-gold-500 font-bold">Start a Conversation</h2>
+                    <h3 class="font-serif text-3xl sm:text-4xl font-bold text-white">Let's Connect for Collaborations & Keynotes</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Whether you want to discuss research partnerships, cultural heritage restitution, art law, or invite me as a speaker, my inbox is always open.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4 text-slate-300">
+                            <div class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gold-500 text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Email Address</div>
+                                <a href="mailto:gracia.lwanzo@uclouvain.be" class="font-medium hover:text-gold-500 transition-colors">gracia.lwanzo@uclouvain.be</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-slate-300">
+                            <div class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gold-500 text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Telephone</div>
+                                <a href="tel:+32487691197" class="font-medium hover:text-gold-500 transition-colors">+32 487 69 11 97[cite: 1]</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-slate-300">
+                            <div class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-gold-500 text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Office Location</div>
+                                <div class="font-medium text-sm">Louvain-la-Neuve, Bruyère, Ave de la Palette 13/201, Belgium[cite: 1]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Box -->
+                <div class="lg:col-span-6 glass-card p-8 sm:p-10 rounded-3xl">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! Gracia will get back to you soon.');" class="space-y-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                            <input type="text" required class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors" placeholder="Dr. Jane Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Your Email</label>
+                            <input type="email" required class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors" placeholder="jane@university.edu">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Message</label>
+                            <textarea rows="4" required class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-gold-500 transition-colors" placeholder="Inquiry regarding conference panel or research collaboration..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gold-500 text-darkBg font-bold hover:bg-gold-600 transition-all shadow-xl shadow-gold-500/20">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-6 border-t border-slate-900 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="font-serif text-slate-300 text-sm">
+                Gracia Lwanzo Kasongo <span class="text-gold-500">•</span> Young, Artistic & Corporate
+            </div>
+            <div>
+                © 2026 All Rights Reserved. Louvain-la-Neuve, Belgium[cite: 1].
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu Toggle -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
